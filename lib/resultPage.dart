@@ -1,9 +1,14 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Secoundpage extends StatefulWidget {
-  const Secoundpage({Key? key}) : super(key: key);
+   Secoundpage({Key? key}) : super(key: key);
+
+
+
+   final _f = new DateFormat('dd-MM-yyyy');
 
   @override
   State<Secoundpage> createState() => _SecoundpageState();
@@ -12,19 +17,30 @@ class Secoundpage extends StatefulWidget {
 class _SecoundpageState extends State<Secoundpage> {
   @override
   Widget build(BuildContext context) {
+    final _fecha = widget._f.format(new DateTime.now());
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.pink,
-        ),
-          backgroundColor: Colors.black87,
-        body: Column(
-         children: const <Widget>[
-          Center(
-             child:  Text("Resultado", style: TextStyle(fontSize: 30, color: Colors.white))
-           )
-         ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(Icons.people),
+              Text("Nombre"),
+              Container(
+                child: Text(_fecha.toString()),
+              ),
+              Container(
+                height: 60,
+                width: 250,
+                decoration: BoxDecoration(
+                    color: Colors.lightGreenAccent[400],
+                  borderRadius: BorderRadius.circular(40)
+                ),
+              )
+            ],
+          ),
         )
       )
     );

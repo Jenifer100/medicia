@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicia/menu.dart';
 import 'package:medicia/questionPage.dart';
 
 void main() {
@@ -51,46 +52,28 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(widget.title),
-      ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AnimatedBuilder(
-                animation: animationCtrl,
-                builder: (BuildContext context, _) => Transform.translate(
-                      offset: Offset(0, translateAnimation.value),
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const QuestionPage()));
-                        },
-                        child: Text(
-                          'Diagnosticar',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        ),
-                        style: TextButton.styleFrom(
-                          primary: Colors.pink,
-                          backgroundColor: Colors.pink,
-                        ),
-                      ),
-                    ))
-          ],
+            Image.asset("assets/menu.jpg", height: 300,width: 300,),
+            const Text("En MEDIC nos preocupamos por tu bienestar", style: TextStyle(fontSize: 20),textAlign: TextAlign.center,),
+            const Text("¡Estas listo para mejorar tu salud!", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),textAlign: TextAlign.center),
+            Container(
+              width: 120,
+                child:IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> menuPage()));}, icon: Icon(Icons.layers_rounded), color: Colors.blueGrey[900], iconSize: 48.0,),
+              decoration: BoxDecoration(
+                color: Colors.pink,
+                borderRadius: BorderRadius.all(Radius.circular(20))
+              ),
+            )
+           ],
         ),
       ),
-      backgroundColor: Colors.black87,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
-        tooltip: 'Menu',
-        child: const Icon(Icons.menu),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      backgroundColor: Colors.white,
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

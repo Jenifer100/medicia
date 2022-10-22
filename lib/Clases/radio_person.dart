@@ -2,94 +2,98 @@ import 'package:flutter/material.dart';
 
 
 class RadioPerson extends StatefulWidget {
-  const RadioPerson({Key? key, this.valor}) : super(key: key);
+   RadioPerson({Key? key, this.name1 = '1', this.name2 = '2', this.name3 = '3', this.name4 = '4'}) : super(key: key);
 
-  final int? valor;
+  final String name1;
+  final String name2;
+  final String name3;
+  final String name4;
+  int valor = 0;
 
   @override
-  State<RadioPerson> createState() => _RadioPersonState(valor);
+  State<RadioPerson> createState() => _RadioPersonState();
+
+
 }
+
 
 class _RadioPersonState extends State<RadioPerson> {
 
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      mainAxisSize: MainAxisSize.max,
+    return Column(
       children: <Widget>[
         Row(
           children: [
-            const Text("1",style: TextStyle(color: Colors.grey, fontSize: 17)),
             Radio(
               value: 0,
-              groupValue: valor,
-              onChanged: (value){
+              groupValue: widget.valor,
+              onChanged: (value) {
                 setState(() {
-                  valor = int.parse(value.toString());
+                  widget.valor = int.parse(value.toString());
                 });
               },
               activeColor: Colors.pink,
               fillColor: MaterialStateProperty.all(Colors.pink),
             ),
+            Text(widget.name1,
+                style: TextStyle(color: Colors.grey, fontSize: 17)),
           ],
         ),
         Row(
           children: [
-            const  Text("2",style: TextStyle(color: Colors.grey, fontSize: 17)),
             Radio(
               value: 1,
-              groupValue: valor,
-              onChanged: (value){
+              groupValue: widget.valor,
+              onChanged: (value) {
                 setState(() {
-                  valor = int.parse(value.toString());
+                  widget.valor = int.parse(value.toString());
                 });
               },
               activeColor: Colors.pink,
               fillColor: MaterialStateProperty.all(Colors.pink),
             ),
+            Text(widget.name2,
+                style: TextStyle(color: Colors.grey, fontSize: 17)),
           ],
         ),
         Row(
           children: [
-            const Text("3",style: TextStyle(color: Colors.grey, fontSize: 17)),
             Radio(
               value: 2,
-              groupValue: valor,
-              onChanged: (value){
+              groupValue: widget.valor,
+              onChanged: (value) {
                 setState(() {
-                  valor = int.parse(value.toString());
+                  widget.valor = int.parse(value.toString());
                 });
               },
               activeColor: Colors.pink,
               fillColor: MaterialStateProperty.all(Colors.pink),
             ),
+            Text(widget.name3,
+                style: const TextStyle(color: Colors.grey, fontSize: 17)),
           ],
         ),
         Row(
           children: [
-            const Text("4",style: TextStyle(color: Colors.grey, fontSize: 17)),
             Radio(
               value: 3,
-              groupValue: valor,
-              onChanged: (value){
+              groupValue: widget.valor,
+              onChanged: (value) {
                 setState(() {
-                  valor = int.parse(value.toString());
+                  widget.valor = int.parse(value.toString());
+                  print(value);
                 });
               },
               activeColor: Colors.pink,
               fillColor: MaterialStateProperty.all(Colors.pink),
             ),
+            Text(widget.name4,
+                style: TextStyle(color: Colors.grey, fontSize: 17)),
           ],
         ),
       ],
     );
   }
-
-
-  _RadioPersonState(this.valor);
-
-  int? valor;
 }
-
