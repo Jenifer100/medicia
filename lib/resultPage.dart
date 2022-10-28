@@ -43,46 +43,107 @@ class _SecoundpageState extends State<Secoundpage> {
                 Container(
                   height: 60,
                   width: 300,
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                    padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Colors.grey,
+                        color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(40)
-                    )
+                    ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Motivo de consulta", style: TextStyle(color: Colors.grey[500]),),
+                      Container(
+                        height: 5,
+                      ),
+                      Text("       Consulta General", style: TextStyle(color: Colors.black),),
+                    ],
+                  ),
                 ),
                 Container(
                   height: 60,
                   width: 300,
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                  padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Colors.grey,
+                        color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(40)
-                    )
+                    ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Enfermedad Precidad", style: TextStyle(color: Colors.grey[500]),),
+                      Container(
+                        height: 5,
+                      ),
+                      Text("       Enfermedad Respiratoria Leve", style: TextStyle(color: Colors.black),),
+                    ],
+                  ),
                 ),
                 Container(
                   height: 60,
                   width: 300,
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                  padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Colors.grey,
+                        color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(40)
-                    )
+                    ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Antecedentes", style: TextStyle(color: Colors.grey[500]),),
+                      Container(
+                        height: 5,
+                      ),
+                      Text("       Ninguno", style: TextStyle(color: Colors.black),),
+                    ],
+                  ),
                 ),
                 Container(
                   height: 60,
                   width: 300,
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                  padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Colors.grey,
+                        color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(40)
-                    )
+                    ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Tratamiento", style: TextStyle(color: Colors.grey[500]),),
+                      Container(
+                        height: 5,
+                      ),
+                      Text("       Beber liquidos en abundancia", style: TextStyle(color: Colors.black),),
+                    ],
+                  ),
                 ),
                 Container(
                     height: 60,
                     width: 300,
+                    margin: EdgeInsets.symmetric(vertical: 10),
+                  padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        color: Colors.grey,
+                        color: Colors.grey[200],
                         borderRadius: BorderRadius.circular(40)
-                    )
+                    ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Habitos", style: TextStyle(color: Colors.grey[500]),),
+                      Container(
+                        height: 5,
+                      ),
+                      Text("       Ninguno", style: TextStyle(color: Colors.black),),
+                    ],
+                  ),
                 ),
                 Container(
                   height: 60,
                   width: 250,
+                  margin: EdgeInsets.symmetric(vertical: 10),
                   decoration: BoxDecoration(
                       color: Colors.lightGreenAccent[400],
                       borderRadius: BorderRadius.circular(40)
