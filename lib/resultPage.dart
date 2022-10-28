@@ -42,6 +42,46 @@ class _SecoundpageState extends State<Secoundpage> {
                 ),
                 Container(
                   height: 60,
+                  width: 300,
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(40)
+                    )
+                ),
+                Container(
+                  height: 60,
+                  width: 300,
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(40)
+                    )
+                ),
+                Container(
+                  height: 60,
+                  width: 300,
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(40)
+                    )
+                ),
+                Container(
+                  height: 60,
+                  width: 300,
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(40)
+                    )
+                ),
+                Container(
+                    height: 60,
+                    width: 300,
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(40)
+                    )
+                ),
+                Container(
+                  height: 60,
                   width: 250,
                   decoration: BoxDecoration(
                       color: Colors.lightGreenAccent[400],
